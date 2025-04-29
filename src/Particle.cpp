@@ -8,9 +8,7 @@ Particle::Particle() {}
 Particle::~Particle() {}
 
 void Particle::applyForce(Vec3D f) {
-    acc.x += f.x;
-    acc.y += f.y;
-    acc.z += f.z;
+    acc = acc + f;
 }
 
 void Particle::update() {

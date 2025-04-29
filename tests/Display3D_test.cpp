@@ -15,9 +15,18 @@ int main (int argc, char* argv[]) {
                 disp->quitDisplay();
             }
         }
-        // disp->clearDisplay();
-        // disp->updateDisplay();
-        SDL_Delay(16);        
+
+        disp->clearDisplay();
+
+        // depth test - same output regardless of order
+        disp->drawCircle((Point) {400, 300, 10}, 20, 0xFF00FF00);
+        disp->drawCircle((Point) {410, 310, 11}, 15, 0xFF00FF00);
+
+        // lines
+        // disp->drawLine(10, 10, 30, 50, 0xFFFFFFFF);
+        
+        disp->updateDisplay();
+        SDL_Delay(100);        
     }
 
     return 0;

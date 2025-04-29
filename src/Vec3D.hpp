@@ -1,3 +1,6 @@
+#ifndef VEC3D_HPP
+#define VEC3D_HPP
+
 typedef struct {
     double x, y, z;
 } Vec3D;
@@ -17,3 +20,5 @@ Vec3D operator * (Vec3D A, double B) {
 Vec3D operator / (Vec3D A, double B) {
     return (Vec3D) {A.x/B, A.y/B, A.z/B};
 }
+
+#endif
